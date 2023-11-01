@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='css/style.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p class="RecipeHeader">Recipe Share</p>
+    </div>
+    <div class="mainpage">
+        <div class="registerbox">
+            <p class="headerR">Register</p>
+
+             
+            <form action="/register", method="post">
+
+                <div class="label">
+                    <label for="first_name">First Name</label>
+                    <input type="text" name="first_name" id="first_name">
+                        {% for message in get_flashed_messages(category_filter=['err_users_first_name']) %}
+                        <p class="errmsg">{{message}}</p>
+                        {% endfor %}
+                </div>
+                <div class="label">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" name="last_name" id="last_name">
+                    {% for message in get_flashed_messages(category_filter=['err_users_last_name']) %}
+                    <p class="errmsg">{{message}}</p>
+                    {% endfor %}
+                </div>
+                <div class="label">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email">
+                    {% for message in get_flashed_messages(category_filter=['err_users_email']) %}
+                    <p class="errmsg">{{message}}</p>
+                    {% endfor %}
+                </div>
+                <div class="label">
+                    <label for="password">Password</label>
+                    <input type="text" name="password" id="password">
+                    {% for message in get_flashed_messages(category_filter=['err_users_password']) %}
+                    <p class="errmsg">{{message}}</p>
+                    {% endfor %}
+                </div>
+                <div class="label">
+                    <label for="confirm_password">Confirm Password</label>
+                    <input type="text" name="confirm_password" id="confirm_password">
+                    {% for message in get_flashed_messages(category_filter=['err_users_confirm_password']) %}
+                    <p class="errmsg">{{message}}</p>
+                    {% endfor %}
+                </div>
+                <button class="buttonR">Register</button>
+    
+            </form>
+            
+        </div>
+
+        <div class="loginbox">
+            <p class="headerL">Login</p>
+
+            <form action="/login", method="post">
+                <div class="label">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email">
+                    {% for message in get_flashed_messages(category_filter=['err_users_loginemail']) %}
+                    <p class="errmsg">{{message}}</p>
+                    {% endfor %}
+                </div>
+                <div class="label">
+                    <label for="password">Password</label>
+                    <input type="text" name="password" id="password">
+                    {% for message in get_flashed_messages(category_filter=['err_users_loginpassword']) %}
+                    <p class="errmsg">{{message}}</p>
+                    {% endfor %}
+                </div>
+                <button class="buttonL">Login</button>
+            </form>
+        </div>
+    </div>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+</html>

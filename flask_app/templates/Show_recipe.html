@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='css/style.css')}}">
+    <title>Document</title>
+</head>
+<body>
+
+    <p class="welcome">Welcome, {{ user[0].first_name }}</p>
+
+    <div class="line">
+        <p class="welcome1">{{ recipes.name}} Recipe</p>
+        <a class= backhome href="/dashboard">Back to recipes</a>
+        <a class="logout" href="{{ url_for('logout') }}">Logout</a>
+    </div>
+
+    <div>
+        <p>posted by:</p>
+        <p>{{ recipes.u.first_name}}</p>
+    </div>
+
+    <div class="showbox">
+        <p class="header">Name:</p>
+        <p class="headerbox">{{ recipes.name }}</p>
+
+        <p class="header">Description:</p>
+        <p class="headerbox">{{ recipes.description}}</p>
+
+        <p class="header">Instructions:</p>
+        <p class="headerbox">{{ recipes.instructions}}</p>
+
+        <p class="header">Date Created:</p>
+        <p class="headerbox">{{ recipes.time}}</p>
+
+        <p class="header">Does it take under 30 mins to make:</p>
+        <p class="headerbox">{% if recipes.under == 1 %}
+            Yes {% else %} No {% endif %}
+        </p>
+    </div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('.static', filename='css/style.css')}}">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Create New Recipe:</h1>
+        <a class="backhome1" href="/dashboard">Back to Recipes</a>
+        <a class="logout1" href="{{ url_for('logout') }}">Logout</a>
+    </div>
+
+    <form action="/create_recipe", method="post">
+        <div class="form">
+            <label class="header1" for="name">Name</label>
+            <input class="headerbox1" type="text" name="name" id="name">
+            {% for message in get_flashed_messages(category_filter=['err_recipes_name']) %}
+                    <p class="errmsg">{{message}}</p>
+                    {% endfor %}
+        </div>
+        <div class="form">
+            <label class="header1" for="description">Description</label>
+            <input class="headerbox1" type="text" name="description" id="description">
+            {% for message in get_flashed_messages(category_filter=['err_recipes_description']) %}
+                    <p class="errmsg">{{message}}</p>
+                    {% endfor %}
+        </div>
+        <div class="form">
+            <label class="header1" for="instructions">Instructions</label>
+            <input class="headerbox1" type="text" name="instructions" id="instructions">
+            {% for message in get_flashed_messages(category_filter=['err_recipes_instructions']) %}
+                    <p class="errmsg">{{message}}</p>
+                    {% endfor %}
+        </div>
+
+        <div class="form">
+            <label class="header1" for="time">Date Cooked/Made</label>
+            <input class="headerbox1" type="date" id="time" name="time">
+            {% for message in get_flashed_messages(category_filter=['err_recipes_time']) %}
+                    <p class="errmsg">{{message}}</p>
+                    {% endfor %}
+        </div>
+
+        <div class="form">
+            Yes<input type="radio" name="under" id="under" value="0">
+            No<input type="radio" name="under" id="under" value="1">
+            {% for message in get_flashed_messages(category_filter=['err_recipes_under']) %}
+                    <p class="errmsg">{{message}}</p>
+                    {% endfor %}
+
+        </div>
+        <button class="enterbtn">Submit</button>
+    </form>
+
+</body>
+</html>

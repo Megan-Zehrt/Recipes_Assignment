@@ -1,0 +1,186 @@
+.registerbox{
+    background-color: gray;
+    height: 600px;
+    width: 400px;
+    margin-right: 100px;
+    padding:20px;
+}
+
+.headerR{
+    font-size: 40px;
+    background-color: blue;
+    width: 140px;
+}
+
+.headerL{
+    font-size: 40px;
+    background-color: rgb(42, 143, 78);
+    width: 100px;
+}
+
+.mainpage{
+    display: flex;
+    margin-left: 200px;
+    margin-top: 25px;
+}
+
+.loginbox{
+    background-color: gray;
+    height: 600px;
+    width: 400px;
+    margin-left: 150px;
+    padding: 20px;
+}
+
+.label{
+    margin-bottom: 15px;
+}
+
+.buttonR{
+    background-color: blue;
+    font-size: 20px;
+}
+
+.buttonL{
+    background-color: rgb(42, 143, 78);
+    font-size: 20px;
+}
+
+.errmsg{
+    background-color: red;
+}
+
+.logoutbtn{
+    background-color: #7575fb;
+    height: 20px;
+    width: 60px;
+    border-style: solid;
+    border-color: black;
+    padding:5px;
+    padding-bottom: 10px;
+}
+
+.logout{
+    font-weight: bold;
+    color: black;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.logout1{
+    font-weight: bold;
+    color: black;
+    margin-left: 50px;
+}
+
+.welcome{
+    font-size: 40px;
+}
+
+.RecipeHeader{
+    color: #a73aa7;
+    font-size: 50px;
+    margin-left: 200px;
+}
+
+.lowerHeader{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.header{
+    font-weight: bold;
+    background-color:bisque;
+    width: 260px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border-style: solid;
+}
+
+.headerbox{
+    font-weight: bold;
+    background-color:white;
+    width: 260px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border-style: solid;
+}
+
+.line{
+    display: flex;
+}
+
+.backhome{
+    font-weight: bold;
+    color: black;
+    margin-top: 50px;
+    margin-left: 1180px;
+}
+
+.backhome1{
+    font-weight: bold;
+    color: black;
+    margin-left: 1180px;
+}
+
+.showbox{
+    background-color: #928d8d;
+    width: 500px;
+    border-style: solid;
+    padding-left: 20px;
+}
+
+.secondheader{
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+
+.form{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.headerbox1{
+    font-weight: bold;
+    background-color:white;
+    width: 260px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border-style: solid;
+    margin-bottom: 20px;
+}
+
+.header1{
+    font-weight: bold;
+    background-color:bisque;
+    width: 260px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-style: solid;
+}
+
+.enterbtn{
+    background-color: #d4c6cd;
+    border-style: solid;
+    padding: 10px;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.links{
+    color: black;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.welcome1{
+    font-size: 20px;
+    display: flex;
+}
